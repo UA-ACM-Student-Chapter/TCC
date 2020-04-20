@@ -11,7 +11,11 @@
         <button mat-menu-item (click)="goToSection('/about', 'SB')" >Staff Bios</button>
         <button mat-menu-item (click)="goToSection('/about', 'BOD')" >Board of Directors</button>
       </mat-menu>
-      <span><button mat-button routerLinkActive="list-item-active" routerLink="/donate">Donate</button></span>
+      <span><button mat-button [matMenuTriggerFor]="donatemenu">Donate</button></span>
+      <mat-menu #donatemenu="matMenu" xPosition="after">
+        <button mat-menu-item (click)="goToSection('/donate', 'wishlist')">Wishlist</button>
+        <button mat-menu-item (click)="goToSection('/donate', 'volunteer')" >Volunteer</button>
+      </mat-menu>
       <span><button mat-button routerLinkActive="list-item-active" routerLink="/contact">Contact Us</button></span>
       <span><button mat-button routerLinkActive="list-item-active" routerLink="/involved">Get Involved</button></span>
       <span><button mat-button routerLinkActive="list-item-active" routerLink="/informed">Get Informed</button></span>

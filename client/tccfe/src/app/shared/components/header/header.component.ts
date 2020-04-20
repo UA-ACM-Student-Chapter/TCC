@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
 
   goToSection(link, conf): void {
     this.router.navigate([link], { state: { data: conf } });
+    console.log(this.router.url)
   }
 
   ngOnInit() {
