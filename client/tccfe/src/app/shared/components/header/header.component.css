@@ -1,6 +1,9 @@
 .navbar {
   justify-content: center;
 }
+.titleheader {
+  justify-content: center;
+}
 span,
 button {
   padding: auto;
